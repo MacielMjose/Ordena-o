@@ -12,7 +12,7 @@ typedef struct {
    int f; // número de registro(s) ocupado(s)
 }NODO; // estrutura do tipo NODO
 
-void ordena_lista ( NODO *lista ); // ordena registros por código - ordem crescente
+void ordena_lista (NODO *lista); // ordena registros por código - ordem crescente
 
 void ordena_lista(NODO *lista)
 {
@@ -26,7 +26,7 @@ void ordena_lista(NODO *lista)
 	}
 	else
 	{    
-		for(lista->f = 0 ; lista->f <= N_MAX ;lista->f ++) //para lista começando em '0' enquanto não for de tamanho N_MAX incrementa o lista->f
+		for(lista->f = 0 ; lista->f <= N_MAX ; lista->f++) //para lista começando em '0' enquanto não for de tamanho N_MAX incrementa o lista->f
 		{
 			if(lista[index].info->codigo  > lista[index+1].info->codigo ) //verifica desde a primeira posição, comparando se o código da próxima é menor que o da posição atual
 			{
