@@ -9,33 +9,33 @@ typedef struct { // registro para uma pessoa
     
 typedef struct {       
    INFORMACAO info[N_MAX]; // dados do registro       
-   int f; // número de registro(s) ocupado(s)
+   int f; // nÃºmero de registro(s) ocupado(s)
 }NODO; // estrutura do tipo NODO
 
-void ordena_lista ( NODO *lista ); // ordena registros por código - ordem crescente
+void ordena_lista ( NODO *lista ); // ordena registros por cÃ³digo - ordem crescente
 
 void ordena_lista(NODO *lista)
 {
-	int index = 0; //controla as posições do vetor de tipo lista
+	int index = 0; //controla as posiÃ§Ãµes do vetor de tipo lista
 	NODO swap; //variavel do tipo nodo para auxiliar na troca
 	
-	if(lista->f == 0) //valida se a lista está vazia, se estiver, ordenação não executa.
+	if(lista->f == 0) //valida se a lista estÃ¡ vazia, se estiver, ordenaÃ§Ã£o nÃ£o executa.
 	{
-		printf("Não existem registros para ordenação...");
+		printf("NÃ£o existem registros para ordenaÃ§Ã£o...");
 			
 	}
 	else
 	{    
-		for(lista->f = 0 ; lista->f <= N_MAX ;lista->f ++) //para lista começando em '0' enquanto não for de tamanho N_MAX incrementa o lista->f
+		for(lista->f = 0 ; lista->f <= N_MAX ;lista->f ++) //para lista comeÃ§ando em '0' enquanto nÃ£o for de tamanho N_MAX incrementa o lista->f
 		{
-			if(lista[index].info->codigo  > lista[index].info->codigo ) //verifica desde a primeira posição, comparando se o código da próxima é menor que o da posição atual
+			if(lista[index].info->codigo  > lista[index+1].info->codigo ) //verifica desde a primeira posiÃ§Ã£o, comparando se o cÃ³digo da prÃ³xima Ã© menor que o da posiÃ§Ã£o atual
 			{
 				
-				swap.info->codigo = lista[index].info->codigo;  // swap recebe o codigo da posição Lista[index] 
-				lista[index].info->codigo = lista[index+1].info->codigo; // Lista[index] recebe o codigo de Lista[index+1] (próxima)
-				lista[index+1].info->codigo = swap.info->codigo; //Lista[index+1] recebe o código armazenado em Swap;
+				swap.info->codigo = lista[index].info->codigo;  // swap recebe o codigo da posiÃ§Ã£o Lista[index] 
+				lista[index].info->codigo = lista[index+1].info->codigo; // Lista[index] recebe o codigo de Lista[index+1] (prÃ³xima)
+				lista[index+1].info->codigo = swap.info->codigo; //Lista[index+1] recebe o cÃ³digo armazenado em Swap;
 					
-				index ++; //incrementa index para dar continuidade no laço FOR
+				index ++; //incrementa index para dar continuidade no laÃ§o FOR
 			}
 			
 			
