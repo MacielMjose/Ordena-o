@@ -32,12 +32,12 @@ void ordena_lista(NODO *lista)
 		{ //*implementar segundo for para comparar cada posição, com toda a Lista
 			for(y = 0 ; y < lista->f ; y++)
 			{
-				if(lista[index].info->codigo  > lista[y+1].info->codigo ) //verifica desde a primeira posição, comparando se o código da próxima é menor que o da posição atual
+				if(lista->info[index].codigo  > lista->info[y+1].codigo ) //verifica desde a primeira posição, comparando se o código da próxima é menor que o da posição atual
 					{
 						
-						swap.info->codigo = lista[index].info->codigo;  // swap recebe o codigo da posição Lista[index] 
-						lista[index].info->codigo = lista[y+1].info->codigo; // Lista[index] recebe o codigo de Lista[index+1] (próxima)
-						lista[y+1].info->codigo = swap.info->codigo; //Lista[index+1] recebe o código armazenado em Swap;
+						swap.info->codigo = lista->info[index].codigo;  // swap recebe o codigo da posição Lista[index] 
+						lista->info[index].codigo = lista->info[y+1].codigo; // Lista[index] recebe o codigo de Lista[index+1] (próxima)
+						lista->info[y+1].codigo = swap.info->codigo; //Lista[index+1] recebe o código armazenado em Swap;
 							
 						//index ++; //incrementa index para dar continuidade no laço FOR //*colocar o Index fora do IF
 					}
@@ -51,8 +51,12 @@ void ordena_lista(NODO *lista)
 	
 }
 
+
+
 int main()
 {
+	
+	
 	
 	return 0;
 }
