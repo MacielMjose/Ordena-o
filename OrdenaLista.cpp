@@ -25,9 +25,10 @@ void ordena_lista(NODO *lista)
 			
 	}
 	else
-	{    
+	{    	//*trocar o lista->f por Index
+		//*trocar a condição por index < LISTA_TAM
 		for(lista->f = 0 ; lista->f <= N_MAX ; lista->f++) //para lista começando em '0' enquanto não for de tamanho N_MAX incrementa o lista->f
-		{
+		{ //*implementar segundo for para comparar cada posição, com toda a Lista
 			if(lista[index].info->codigo  > lista[index+1].info->codigo ) //verifica desde a primeira posição, comparando se o código da próxima é menor que o da posição atual
 			{
 				
@@ -35,7 +36,7 @@ void ordena_lista(NODO *lista)
 				lista[index].info->codigo = lista[index+1].info->codigo; // Lista[index] recebe o codigo de Lista[index+1] (próxima)
 				lista[index+1].info->codigo = swap.info->codigo; //Lista[index+1] recebe o código armazenado em Swap;
 					
-				index ++; //incrementa index para dar continuidade no laço FOR
+				index ++; //incrementa index para dar continuidade no laço FOR //*colocar o Index fora do IF
 			}
 			
 			
