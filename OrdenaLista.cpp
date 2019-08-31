@@ -18,7 +18,7 @@ void exclui_nodo ( NODO *lista ); // exclui um registro por código
 void altera_nodo ( NODO *lista ); // altera um registro a partir de um código de referência
 void ordena_lista ( NODO *lista ); // ordena registros por código - ordem crescente
 void consulta_nome ( NODO lista ); // consulta por nome de referência
-
+void entrada_dados   ( INFORMACAO *aux );     // lê dos dados de entrada
 int main()
 {
 	
@@ -59,6 +59,21 @@ void consulta_nome ( NODO lista ) // consulta por nome de referência
 		
 }
 
+void inclui_inicio ( NODO *lista ){
+	int i;
+	INFORMACAO aux; // variavel do tipo informação para auxiliar na troca
+	entra_dadados(&aux); // atribuido o endereço de memoria na auxilar
+	
+	if (lista->f == 0){  // checka se a lista está vazia
+		printf("Lista vazia") 
+	}else{
+		for (i = lista->f; i < 0 ; i--)  // percorre a lista da direta até a esquerda (início)
+		lista->info[i] = lista->info[i - 1]; // desloca o indíce para o começo
+		lista->info[i] = aux; // atribui o valor para auxiliar
+		lista->f++; // incrementa o índice no inicio na lista apos deslocar
+	}
+	
+}
 
 void ordena_lista(NODO *lista)
 {
