@@ -62,7 +62,7 @@ void consulta_nome ( NODO lista ) // consulta por nome de referência
 void inclui_inicio ( NODO *lista ){
 	int i;
 	INFORMACAO aux; // variavel do tipo informação para auxiliar na troca
-	entra_dadados(&aux); // atribuido o endereço de memoria na auxilar
+	entrada_dados(&aux); // atribuido o endereço de memoria na auxilar
 	
 	if (lista->f == 0){  // checka se a lista está vazia
 		printf("Lista vazia") 
